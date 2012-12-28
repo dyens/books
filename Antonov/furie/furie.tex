@@ -1,0 +1,43 @@
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%opening
+\title{}
+\author{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\end{abstract}
+
+\section{}
+\begin{equation}
+\int d \vec{k} k^{d+\xi} exp (\iota \vec{k}(\vec{x}-\vec{x'}))\propto r^{-2d-\xi}
+\end{equation}
+
+Вопрос в том, как вообще брать такой интеграл. И можно ли говорить что ответ пропорционален $r$ в некоторой степени.
+Соображения размерности конечно имеют место быть, но у дельта функции тоже есть размерность. Все указывает на то, что в ответе и появятся обобщенные функции.
+Пусть $d=1, \xi=0$.
+\begin{equation}
+\int d k  exp (\iota k(x-x'))=2\pi\delta(x-x') 
+\end{equation}
+\begin{equation}
+\partial_{x}\delta(x-x')=(2\pi)^{-1}\int dk  exp (\iota k(x-x')) k\iota
+\end{equation}
+Пусть теперь $d \neq 1$
+\begin{equation}
+\int d \vec{k} exp (\iota \vec{k}(\vec{x}-\vec{x'}))=(2\pi)^{d}\delta^{(d)}(x-x') \\
+\end{equation}
+\begin{equation}
+\partial_{i}\partial^{i}\delta^{(d)}(x-x')=-(2\pi)^{-d}\int d \vec{k} exp (\iota \vec{k}(\vec{x}-\vec{x'}))k^d
+\end{equation}
+
+Думаю, в случае отрицательных степеней можно показать, что будет производная тетта функции.
+Что же делать, если степень не является целым числом? 
+Есть еще одно определение дробной производной- через интеграл Коши, но если я правильно понимаю, то оно зависит от выбора контура интегрирования. Из-за того, что степень у нас дробная - будут ветвления.
+\begin{equation}
+D^p_C f(t) = \frac{1}{\Gamma(p)}\int\limits_{C}\frac{f(u)}{(t-u)^{p+1}}du
+\end{equation}
+Нам необходимо брать $d+\xi -$ производную от дельта функции. Как я понял, в общем случае $D^p_CD^k_C\neq D^{p+k}_C$.
+Что-то я не понимаю. Должно быть тут нет никакой проблемы. Действие в импульсном представлении выглядит хорошо. В координатном видимо нет. На Лагранжиан накладываются всякие разные условия. Будет ли такой Лагранжиан плохой? Честно сказать я уже многое подзабыл, пойду поднимать матфизику 3 курса.
+\end{document}
